@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Chuck Tingle Title Generator</title>
+
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+
+</head>
+
+<body onload="javascript: generateTingler();" role="document">
+
+<div class="container">
+
+<!-- Content -->
+
+<center><h2>The Chuck Tingle Title Generator</h2></center>
+
+<br/>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  	<center>
+  		<p class="lead">The next Tingler will be...</p>
+  		<h1 class="text-danger" id="tinglertitle">...</h1>
+  		<hr/>
+		<a href="#" class="btn btn-large btn-primary" onclick="javascript: generateTingler();">Give me Another!</a>
+	</center>
+  </div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Share your Tingler</div>
+  <div class="panel-body">
+
+<center>	
+	<div id="twitter-share-section"></div>
+ </center>
+
+  </div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Who is Chuck Tingle?</div>
+  <div class="panel-body">
+ <p><a href="https://twitter.com/ChuckTingle">Chuck Tingle</a> is an erotica author with quite the interesting back catalogue.
+</p>
+
+<p>
+
+<center>
+<img src="img/cover1.jpg" alt="Pounded By The Gay Unicorn Football Squad" class="img-thumbnail">
+<img src="img/cover2.jpg" alt="I'm Gay For My Living Billionaire Jet Plane" class="img-thumbnail">
+<img src="img/cover3.jpg" alt="Bigfoot Sommelier Butt Tasting" class="img-thumbnail">
+</center>
+
+</p>
+
+<p>
+ 	Author of such tales as "Pounded by President Bigfoot" and "Gay T-Rex Law Firm: Executive Boner", Tingle describes himself as a Tae Kwon Do grandmaster, and a PhD in holistic massage. Whether he practices the two simultaneously is not clear.
+</p>
+<p>He follows only Taylor Swift.</p>
+<p>
+	Tingle refers to his self-published sex romps as "Tinglers", and to be honest, we don't think he's producing them quick enough. So we created this page to get those creative juices flowing, and ONLY the creative juices.</p>
+	<p>Take a look at Tingle's current Tinglers on <a href="http://www.amazon.com/Chuck-Tingle/e/B00SF2MTYK/ref=ntt_athr_dp_pel_1">Amazon</a>, or better yet, 
+		<a href="http://www.amazon.com/review/R1732AW7EQL5IS/ref=cm_cr_dp_title?ie=UTF8&ASIN=B00SHI7NOS&channel=detail-glance&nodeID=133140011&store=digital-text">check</a>
+		 <a href="http://www.amazon.com/review/R2OZ21UC8LF2V8/ref=cm_cr_dp_title?ie=UTF8&ASIN=B00QTTIJVI&channel=detail-glance&nodeID=283155&store=books">out</a> 
+		 <a href="http://www.amazon.com/review/R2KG8XIDQJ1N2/ref=cm_cr_dp_title?ie=UTF8&ASIN=B00SROVKXM&channel=detail-glance&nodeID=283155&store=books">some</a>
+		 reviews.
+		</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Why?</div>
+  <div class="panel-body">
+  	<p>
+  	<a href="https://twitter.com/theotherelliott">@theotherelliott</a> and <a href="https://twitter.com/CyTheSomething">@CyTheSomething</a> found out about Dr. Tingle over dinner and immediately went searching for a thesaurus and a dinosaur book.
+</p>
+<p>
+	Images from Amazon.com
+</p>
+  </div>
+</div>
+
+
+<!-- End Content -->
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script language="Javascript">
+<!--
+
+var sexActsPastTense = [
+	"Reamed",
+	"Pounded",
+	"Sixty-Nined",
+	"Ridden",
+	"Pumped",
+	"Milked",
+	"Violated",
+	"Gang-Banged",
+	"Taken",
+	"Ravished",
+	"Stolen",
+	"Rimmed",
+	"Sucked",
+	"Fisted",
+	"Used",
+	"Sullied",
+	"Marked",
+	"Claimed",
+	"Chosen",
+];
+
+var WantSynonyms = [
+	"Wants",
+	"Needs",
+	"Craves",
+	"Desires",
+];
+
+var ThingsToWant = [
+	"Hot Gay Sex",
+	"Rampant Boners",
+	"Massive Dongs",
+	"Epic Rim Jobs",
+	"Nasty Foot Jobs",
+	"Hard Pounding",
+	"Sucking",
+	"Filthy Sixty-Nine",
+	"A Gang Bang",
+	"Oral",
+];
+
+var pronouns = [
+	"My",
+	"The",
+	"A",
+];
+
+var creatures = [
+	"Shark",
+	"Sandwich",
+	"Border Collie",
+	"Owl",
+	"Jet Plane",
+	"Football Squad",
+	"Bigfoot",
+	"Leshy",
+	"Manticore",
+	"Peryton",
+	"Nuckelavee",
+	"Mongolian Death Worm",
+	"Wendigo",
+	"Jackalope",
+	"Dybbuk",
+	"Satyr",
+	"Centaur",
+	"Phoenix",
+	"Yeti",
+	"Mummy",
+	"Triceratops",
+	"T-Rex",
+	"Raptor",
+	"Halicoprion",
+	"Aeolosaurus",
+	"Quetzalcoatlus",
+	"Stegosaurus",
+	"Brachiosaurus",
+	"Anklyasaurus",
+	"Truadon",
+	"Albertasaurus",
+	"Pterodactyl",
+	"Plesiosaur",
+	"Megaladon",
+	"Diplodocaus",
+	"German Shepherd",
+	"Pug",
+	"Shiba Inu",
+	"Labrador",
+	"Boxer",
+	"Werewolf",
+	"Newfoundland",
+	"Saint Bernard",
+	"Giraffe",
+	"Archangel",
+	"Cyborg",
+	"Dragon",
+	"Yacht",
+];
+
+var singularModifiers = [
+	"President",
+	"Doctor",
+	"Coach",
+	"Uncle",
+	"Cardinal",
+	"Billionaire",
+	"Chef",
+	"Lieutenant",
+	"Astronaut",
+	"Judge",
+	"Chief Justice",
+	"Senator",
+	"Congressman",
+	"Detective",
+	"Captain",
+	"Fireman",
+];
+
+var pluralModifiers = [
+	"Unicorn",
+	"Linebacker",
+	"Lawyer",
+	"Billionaire",
+	"Veterinarian",
+	"Piano Tuner",
+	"Mattress Tester",
+	"Plumber",
+	"Pizza Boy",
+	"Skydiver",
+	"Parkour Master",
+	"Paintball Instructor",
+	"Personal Trainer",
+	"Pool Boy",
+	"Jeweller",
+	"Meteorologist",
+	"Astrologist",
+	"Nutritionist",
+	"Physiotherapist",
+	"Lobbyist",
+	"Private Eye",
+	"Cat Therapist",
+	"Unicorn Trainer",
+	"Unicorn Jockey",
+	"MLG Pro",
+	"Dog Groomer",
+	"Archaeologist",
+	"Police Officer",
+	"EMT",
+	"Skater",
+	"Tattoo Artist",
+	"Bootblack",
+	"Linguist",
+	"Wrestler",
+	"Sommelier",
+];
+
+function randomFromArray(theArr){
+	return theArr[Math.floor(Math.random() * theArr.length)];
+}
+
+var types = [
+	function(){
+		return randomFromArray(sexActsPastTense) +
+			" By " +
+			randomFromArray(pronouns) + 
+			" " + 
+			randomFromArray(pluralModifiers) +
+			" " + 
+			randomFromArray(creatures);
+	},
+	function(){
+		return randomFromArray(sexActsPastTense) +
+			" By " + 
+			randomFromArray(singularModifiers) +
+			" " + 
+			randomFromArray(creatures);
+	},
+	function(){
+		return randomFromArray(pronouns) + 
+			" " + 
+			randomFromArray(pluralModifiers) +
+			" " + 
+			randomFromArray(creatures) +
+			" " +
+			randomFromArray(WantSynonyms) +
+			" " +
+			randomFromArray(ThingsToWant);
+	},
+	function(){
+		return randomFromArray(singularModifiers) +
+			" " + 
+			randomFromArray(creatures) +
+			" " +
+			randomFromArray(WantSynonyms) +
+			" " +
+			randomFromArray(ThingsToWant);
+	},
+];
+
+function updateTweet(){
+	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+}
+
+function updateTwitterValues(share_url, title) {
+// clear out the <a> tag that's currently there...probably don't really need this since you're replacing whatever is in there already.
+  $("#twitter-share-section").html('&nbsp;'); 
+  $("#twitter-share-section").html('<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + share_url +'" data-size="large" data-text="' + title + '" data-count="none">Tweet</a>');
+	twttr.widgets.load();
+}
+
+function generateTingler(){
+
+	var typeGen = randomFromArray(types);
+	var title = typeGen();
+	updateTwitterValues("http://www.tinglertitlegenerator.com/","My Tingler title was '" + title + "'.");
+	$( "#tinglertitle" ).text(title);
+	$('meta[name=og\\:description]').attr('content', "My Tingler title was '" + title + "'.");
+}
+
+// -->
+</script>
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=807009036038189&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</body>
+
+</html>
